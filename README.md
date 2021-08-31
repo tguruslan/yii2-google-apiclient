@@ -2,10 +2,10 @@
 
 A Yii2 wrapper for the official Google API PHP Client.
 
-[![Latest Stable Version](https://poser.pugx.org/idk/yii2-google-apiclient/version)](https://packagist.org/packages/idk/yii2-google-apiclient)
-[![Latest Unstable Version](https://poser.pugx.org/idk/yii2-google-apiclient/v/unstable)](//packagist.org/packages/idk/yii2-google-apiclient)
-[![License](https://poser.pugx.org/idk/yii2-google-apiclient/license)](https://packagist.org/packages/idk/yii2-google-apiclient)
-[![Total Downloads](https://poser.pugx.org/idk/yii2-google-apiclient/downloads)](https://packagist.org/packages/idk/yii2-google-apiclient)
+[![Latest Stable Version](https://poser.pugx.org/tguruslan/yii2-google-apiclient/version)](https://packagist.org/packages/tguruslan/yii2-google-apiclient)
+[![Latest Unstable Version](https://poser.pugx.org/tguruslan/yii2-google-apiclient/v/unstable)](//packagist.org/packages/tguruslan/yii2-google-apiclient)
+[![License](https://poser.pugx.org/tguruslan/yii2-google-apiclient/license)](https://packagist.org/packages/tguruslan/yii2-google-apiclient)
+[![Total Downloads](https://poser.pugx.org/tguruslan/yii2-google-apiclient/downloads)](https://packagist.org/packages/tguruslan/yii2-google-apiclient)
 
 This extension comes with:
 
@@ -17,7 +17,7 @@ This extension comes with:
 The preferred method of installation is via [Packagist](https://packagist.org) and [Composer](https://getcomposer.org/download/). Run the following command to install the package and add it as a requirement to your project's `composer.json`:
 
 ```bash
-composer require idk/yii2-google-apiclient
+composer require tguruslan/yii2-google-apiclient
 ```
 
 ## Configuration
@@ -33,15 +33,19 @@ You can generate this file using the provided console utility:
 'bootstrap' => ['log', 'yii2gac'],
 'modules' => [
     'yii2gac' => [
-        'class' => 'idk\yii2\google\apiclient\Module',
+        'class' => 'tguruslan\yii2\google\apiclient\Module',
     ],
 ],
 ```
 
 * Use the /configure sub command:
-```shell 
-./yii yii2gac/configure <clientSecretPath> [api]
+```shell
+./yii yii2gac/configure <clientSecretPath> [api] # replace [api] replace with api sections separated by spaces, for example: admin groupssettings
 ```
+
+* If api has several versions type version or press Enter
+* If need pick the desired version number type one of variants
+* When need enter required scopes paste full scopes url separated by a comma
 
 where `clientSecretPath` is the path to your secret JSON file obtained from the [Google Console](https://console.developers.google.com/) and `api` the api identifier (it will be prompted for if not provided).
 
@@ -56,7 +60,7 @@ Here's how to setup GMail for example, a usage sample is provided below.
     'components' => [
         // ..
         'google' => [
-            'class' => 'idk\yii2\google\apiclient\components\GoogleApiClient',
+            'class' => 'tguruslan\yii2\google\apiclient\components\GoogleApiClient',
             'credentialsPath' => '@runtime/google-apiclient/auth.json',
             'clientSecretPath' => '@runtime/google-apiclient/secret.json',
         ],

@@ -1,28 +1,28 @@
 {
-  "name": "idk/yii2-google-apiclient",
-  "description": "A Yii2 wrapper for the official Google API PHP Client",
+  "name": "tguruslan/yii2-google-apiclient",
+  "description": "A Yii2 wrapper for the official Google API 2.1 PHP Client",
   "type": "yii2-extension",
   "keywords": ["yii2", "google", "api"],
   "license": "MIT",
-  "homepage": "https://github.com/idk-tn/yii2-google-apiclient",
+  "homepage": "https://github.com/tguruslan/yii2-google-apiclient",
   "authors": [
     {
-      "name": "Mehdi Achour",
-      "email": "machour@gmail.com"
+      "name": "Ruslan",
+      "email": "tguruslan1994@gmail.com"
     }
   ],
   "support": {
-    "issues": "https://github.com/idk-tn/yii2-google-apiclient/issues",
-    "source": "https://github.com/idk-tn/yii2-google-apiclient"
+    "issues": "https://github.com/tguruslan/yii2-google-apiclient/issues",
+    "source": "https://github.com/tguruslan/yii2-google-apiclient"
   },
   "require": {
     "yiisoft/yii2": "~2",
-    "google/apiclient": "1.*",
+    "google/apiclient": "2.1",
     "ramsey/uuid": "^3.7"
   },
   "autoload": {
     "psr-4": {
-      "idk\\yii2\\google\\apiclient\\": ""
+      "tguruslan\\yii2\\google\\apiclient\\": ""
     }
   }
 }

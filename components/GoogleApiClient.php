@@ -1,6 +1,6 @@
 <?php
 
-namespace idk\yii2\google\apiclient\components;
+namespace tguruslan\yii2\google\apiclient\components;
 
 use Google_Client;
 use Yii;
@@ -10,7 +10,7 @@ use yii\base\Exception;
 /**
  * Class GoogleApiClient
  *
- * @package idk\yii2\google\apiclient
+ * @package tguruslan\yii2\google\apiclient
  */
 class GoogleApiClient extends Component
 {
@@ -76,7 +76,7 @@ class GoogleApiClient extends Component
         if ($client->isAccessTokenExpired()) {
             $client->setAuthConfigFile(Yii::getAlias($this->clientSecretPath));
             $client->refreshToken($client->getRefreshToken());
-            $this->saveAccessToken($client->getAccessToken());
+            $this->saveAccessToken(json_encode($client->getAccessToken()));
         }
         return $client;
     }

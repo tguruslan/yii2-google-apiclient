@@ -1,6 +1,6 @@
 <?php
 
-namespace idk\yii2\google\apiclient\commands;
+namespace tguruslan\yii2\google\apiclient\commands;
 
 use Google_Auth_Exception;
 use Google_Client;
@@ -216,7 +216,7 @@ class GoogleController extends Controller
 
             // Exchange authorization code for an access token.
             try {
-                $accessToken = $client->authenticate($authCode);
+                $accessToken = json_encode($client->authenticate($authCode));
                 $authenticated = true;
             } catch (Google_Auth_Exception $e) {
                 $this->stderr($e->getMessage() . "\n");

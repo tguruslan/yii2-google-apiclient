@@ -40,7 +40,7 @@ You can generate this file using the provided console utility:
 
 * Use the /configure sub command:
 ```shell
-./yii yii2gac/configure <clientSecretPath> [api] # replace [api] replace with api sections separated by spaces, for example: admin groupssettings
+./yii yii2gac/configure <clientSecretPath> [api] # replace [api] with api sections separated by comma, for example: admin,groupssettings
 ```
 
 * If api has several versions type version or press Enter

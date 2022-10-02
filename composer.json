@@ -1,6 +1,6 @@
 {
   "name": "tguruslan/yii2-google-apiclient",
-  "description": "A Yii2 wrapper for the official Google API 2.1 PHP Client",
+  "description": "A Yii2 wrapper for the official Google API 2 PHP Client",
   "type": "yii2-extension",
   "keywords": ["yii2", "google", "api"],
   "license": "MIT",
@@ -17,7 +17,7 @@
   },
   "require": {
     "yiisoft/yii2": "~2",
-    "google/apiclient": "2.10",
+    "google/apiclient": "~2",
     "ramsey/uuid": "^3.7"
   },
   "autoload": {

@@ -78,7 +78,7 @@ class GoogleController extends Controller
 
         foreach ($api_list as $api) {
             $version = false;
-            if (count((count) $this->apis[$api]) > 1) {
+            if (count((array) $this->apis[$api]) > 1) {
                 if ($this->prompt("\nThe $api API has several versions. Install preferred version?")) {
                     foreach ($this->apis[$api] as $_api) {
                         if ($_api->preferred) {
